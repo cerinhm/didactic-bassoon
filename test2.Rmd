@@ -1,0 +1,31 @@
+---
+title: "New_Markdown_File"
+author: "CH"
+date: "21/01/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Markdown File
+## Here is a subtitle
+
+Here is some ordinary text. 
+
+Reading in the data:
+
+```{r}
+library(tidyverse)
+comp <- read.csv('data/compensation.csv')
+glimpse(comp)
+ggplot(comp, aes(x = Root, y = Fruit)) +
+  geom_point() +
+  facet_wrap(~ Grazing)
+```
+
+
+
+
+
